@@ -1,5 +1,5 @@
 function main() {
-  clips = prompt("clips: ");
-  funds = prompt("funds: ");
-  trust = prompt("trust: ");
+  clips = parseInt(prompt("clips: "));
+  funds = parseInt(prompt("funds: "));
+  trust = parseInt(prompt("trust: "));
 }
