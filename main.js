@@ -1,5 +1,3 @@
-try {
-  alert("test!");
-} catch(err) {
-  alert(err);
+function main() {
+  alert("main");
 }
