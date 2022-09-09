@@ -1,5 +1,5 @@
 try {
-  alert("test");
+  alert("test!");
 } catch(err) {
   alert(err);
 }
