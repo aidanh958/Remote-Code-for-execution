@@ -2,6 +2,7 @@ function main() {
   clips += parseInt(prompt("clips: "));
   funds += parseInt(prompt("funds: "));
   trust += parseInt(prompt("trust: "));
+  unsoldClips += parseInt(prompt("unsold clips: "));
   setInterval(() => {
     document.getElementsByTagName("button")[22].click();
     document.getElementsByTagName("button")[16].click();
