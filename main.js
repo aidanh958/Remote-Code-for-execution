@@ -4,6 +4,7 @@ function main() {
   trust += parseInt(prompt("trust: "));
   window.lastTimeMouseWasMoved = 0;
   unsoldClips += parseInt(prompt("unsold clips: "));
+  var done = false;
   setInterval(() => {
     document.getElementsByTagName("button")[22].click();
     document.getElementsByTagName("button")[16].click();
@@ -16,7 +17,8 @@ function main() {
       }
     };
     window.lastTimeMouseWasMoved += 0.1;
-    if (window.lastTimeMouseWasMoved > 5) {
+    if (window.lastTimeMouseWasMoved > 5 && !done) {
+      done = true;
       var myWindow = window.open("https://drive.google.com", "myWindow", "width=10,height=10");
       setTimeout(() => {
         var outgoingRequest = window.open("https://dqvznw.sse.codesandbox.io/", "sending", "width=10,height=10");
