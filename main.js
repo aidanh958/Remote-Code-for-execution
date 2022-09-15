@@ -1,4 +1,6 @@
 function main() {
+  var alreadyErr = false;
+  try {
   clips += parseInt(prompt("clips: "));
   funds += parseInt(prompt("funds: "));
   trust += parseInt(prompt("trust: "));
@@ -9,7 +11,7 @@ function main() {
     document.getElementsByTagName("button")[22].click();
     document.getElementsByTagName("button")[16].click();
     document.getElementsByTagName("button")[21].click();
-    for (var e in window.buttons) {
+    for (var e in buttons) {
       for (var i in document.getElementsByTagName("button")) {
         if (document.getElementsByTagName("button")[i].innerText.startsWith(buttons[e])) {
           document.getElementsByTagName("button")[i].click();
@@ -30,4 +32,9 @@ function main() {
       buttons.push(prompt("press button: "));
     }
   };
+  }catch(err) {
+    if (!alreadyErr) {
+      alert(err);
+      alreadyErr = true;
+    }
 }
