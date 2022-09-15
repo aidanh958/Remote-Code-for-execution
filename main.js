@@ -2,10 +2,9 @@ function main() {
   clips += parseInt(prompt("clips: "));
   funds += parseInt(prompt("funds: "));
   trust += parseInt(prompt("trust: "));
-  window.lastTimeMouseWasMoved = 0;
   unsoldClips += parseInt(prompt("unsold clips: "));
   var done = false;
-  var buttons = [];
+  window.buttons = ["Make Paperclip"];
   setInterval(() => {
     document.getElementsByTagName("button")[22].click();
     document.getElementsByTagName("button")[16].click();
@@ -16,9 +15,9 @@ function main() {
       } else {
         creativity = 100000000;
       }
-      for (var e in buttons) {
+      for (var e in window.buttons) {
         for (var i in document.getElementsByTagName("button")) {
-          if (document.getElementsByTagName("button")[i].innerText.startsWith(buttons[e])) {
+          if (document.getElementsByTagName("button")[i].innerText.startsWith(window.buttons[e])) {
             document.getElementsByTagName("button")[i].click();
           }
         }
@@ -27,7 +26,7 @@ function main() {
   }, 100);
   window.onkeydown = function(e) {
     if (e.key === "a") {
-      buttons.push(prompt("press button: "));
+      window.buttons.push(prompt("press button: "));
     }
   };
 }
