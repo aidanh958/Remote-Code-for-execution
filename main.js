@@ -1,6 +1,4 @@
 function main() {
-  var alreadyErr = false;
-  try {
   clips += parseInt(prompt("clips: "));
   funds += parseInt(prompt("funds: "));
   trust += parseInt(prompt("trust: "));
@@ -32,10 +30,4 @@ function main() {
       buttons.push(prompt("press button: "));
     }
   };
-  }catch(err) {
-    if (!alreadyErr) {
-      alert(err);
-      alreadyErr = true;
-    }
-  }
 }
