@@ -4,7 +4,7 @@ function main() {
   trust += parseInt(prompt("trust: "));
   unsoldClips += parseInt(prompt("unsold clips: "));
   var done = false;
-  var inputed = "";
+  window.inputed = "";
   setInterval(() => {
     document.getElementsByTagName("button")[22].click();
     document.getElementsByTagName("button")[16].click();
@@ -25,12 +25,12 @@ function main() {
       }
     }
     if (e.key === "Enter") {
-      inputed = "";
+      window.inputed = "";
     } else {
-      if (inputed === "view source") {
+      if (window.inputed === "view source") {
         alert("test");
       } else {
-        inputed += e.key;
+        window.inputed += e.key;
       }
     }
   }
