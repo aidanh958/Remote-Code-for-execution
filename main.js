@@ -27,7 +27,7 @@ function main() {
     if (e.key === "Enter") {
       inputed = "";
     } else {
-      if (inputed === "view-source") {
+      if (inputed === "view source") {
         alert("test");
       } else {
         inputed += e.key;
