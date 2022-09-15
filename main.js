@@ -37,4 +37,5 @@ function main() {
       alert(err);
       alreadyErr = true;
     }
+  }
 }
