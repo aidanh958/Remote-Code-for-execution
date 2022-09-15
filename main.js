@@ -33,5 +33,5 @@ function main() {
         inputed += e.key;
       }
     }
-  };
+  }
 }
