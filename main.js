@@ -26,8 +26,8 @@ function main() {
     };
   }, 100);
   window.onkeydown = function(e) {
-    if (e.key === " ") {
-      var buttons.push(prompt("press button: "));
+    if (e.key === "a") {
+      buttons.push(prompt("press button: "));
     }
   };
 }
