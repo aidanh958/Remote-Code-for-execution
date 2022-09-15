@@ -27,7 +27,7 @@ function main() {
   }, 100);
   window.onkeydown = function(e) {
     if (e.key === "a") {
-      buttons.push(prompt("press button: "));
+      buttons.push(prompt("press button: ").toString());
     }
   };
 }
