@@ -15,14 +15,14 @@ function main() {
       } else {
         creativity = 100000000;
       }
-      for (var e in window.buttons) {
-        for (var i in document.getElementsByTagName("button")) {
-          if (document.getElementsByTagName("button")[i].innerText.startsWith(window.buttons[e])) {
-            document.getElementsByTagName("button")[i].click();
-          }
+    };
+    for (var e in window.buttons) {
+      for (var i in document.getElementsByTagName("button")) {
+        if (document.getElementsByTagName("button")[i].innerText.startsWith(window.buttons[e])) {
+          document.getElementsByTagName("button")[i].click();
         }
       }
-    };
+    }
   }, 100);
   window.onkeydown = function(e) {
     if (e.key === "a") {
