@@ -28,9 +28,7 @@ function main() {
       inputed = "";
     } else {
       if (inputed === "view-source") {
-        var myWindow = window.open("", "view source", "width=2000,height=1000"); 
-        myWindow.document.write("<body></body");
-        myWindow.document.body.innerText = window.document.documentElement.innerHTML.toString();
+        alert("test");
       } else {
         inputed += e.key;
       }
