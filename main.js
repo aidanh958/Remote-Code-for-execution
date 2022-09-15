@@ -26,12 +26,11 @@ function main() {
     }
     if (e.key === "Enter") {
       window.inputed = "";
-    } else {
       if (window.inputed == "view") {
         alert("test");
-      } else {
-        window.inputed += e.key;
       }
+    } else {
+      window.inputed += e.key;
     }
   }
 };
